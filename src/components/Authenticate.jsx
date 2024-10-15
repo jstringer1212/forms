@@ -13,10 +13,11 @@ export default function Authenticate({ token }) {
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
-          },
+          }
         }
-      );
+      )
       const result = await response.json();
+      console.log(response);
       setSuccessMessage(result.message);
     } catch (error) {
       setError(error.message);

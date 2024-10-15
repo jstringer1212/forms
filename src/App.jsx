@@ -5,14 +5,11 @@ import SignUpForm from "./components/SignUpForm";
 export default function App() {
   const [token, setToken] = useState(null);
   return (
-    <>
-    
+    <div>
       <Authenticate token={token} setToken={setToken} />
       <SignUpForm token={token} setToken={setToken}  />
-    
-    </>
+    </div>
   );
 }
 
 
-// Object { message: "ENOENT: no such file or directory, stat '/app/index.html'", name: "Error" }
